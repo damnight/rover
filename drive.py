@@ -91,19 +91,19 @@ def reverseTurnRight():
 
 commands = {
     0 : forwardDrive(),
-    1 : reverseDrive,
-    2 : spinLeft,
-    3 : spinRight,
+    1 : reverseDrive(),
+    2 : spinLeft(),
+    3 : spinRight(),
 }
  
 def main():
-    try:
-        while True:
+    while 1:
+        try:
             line = sys.stdin.readline()
             if not line: break
             commands[line] 
-    except:
-        print('failed')
+        except:
+            print('failed')
 if __name__ == "__main__":
     """ This is executed when run from the command line """
     main()
