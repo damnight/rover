@@ -90,7 +90,7 @@ def reverseTurnRight():
 	reverseRight.value = 0.2
 
 commands = {
-    0 : forwardDrive,
+    0 : forwardDrive(),
     1 : reverseDrive,
     2 : spinLeft,
     3 : spinRight,
@@ -101,7 +101,7 @@ def main():
         while True:
             line = sys.stdin.readline()
             if not line: break
-            commands[line]() 
+            commands[line] 
     except:
         print('failed')
 if __name__ == "__main__":
