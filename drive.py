@@ -90,10 +90,10 @@ def reverseTurnRight():
 	reverseRight.value = 0.2
 
 commands = {
-    w : forwardDrive,
-    s : reverseDrive,
-    a : spinLeft,
-    d : spinRight,
+    0 : forwardDrive,
+    1 : reverseDrive,
+    2 : spinLeft,
+    3 : spinRight,
 }
  
 def main():
