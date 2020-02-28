@@ -99,9 +99,36 @@ commands = {
 def main():
     while 1:
         try:
-            line = sys.stdin.readline()
+            line = msvcrt.getch()
             if not line: break
-            commands[line] 
+            if line == 'w':
+                forwardDrive()
+            if line == 's':
+                reverseDrive()
+            if line == 'a':
+                spinLeft()
+            if line == 'd':
+                spinLeft()
+            if line == 'q':
+                forwardLeft()
+            if line == 'e':
+                forwardRight()
+            if line == '1':
+                forwardTurnLeft()
+            if line == '3':
+                forwardTurnRight()
+            if line == 'z':
+                reverseLeft()
+            if line == 'c':
+                reverseRight()
+            if line == 'v':
+                reverseTurnLeft()
+            if line == 'b':
+                reverseTurnRight()
+            else:
+                allStop()
+
+
         except:
             print('failed')
 if __name__ == "__main__":
