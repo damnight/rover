@@ -17,7 +17,7 @@ __license__ = "MIT"
 from gpiozero import PWMOutputDevice
 from time import sleep
 import sys
-import msvcrt
+import getch
  
 #///////////////// Define Motor Driver GPIO Pins /////////////////
 # Motor A, Left Side GPIO CONSTANTS
@@ -100,7 +100,7 @@ commands = {
 def main():
     while 1:
         try:
-            line = msvcrt.getch()
+            line = getch()
             if not line: break
             if line == 'w':
                 forwardDrive()
