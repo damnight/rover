@@ -16,7 +16,6 @@ __license__ = "MIT"
  
 from gpiozero import PWMOutputDevice
 from time import sleep
-import sys
 import getch
  
 #///////////////// Define Motor Driver GPIO Pins /////////////////
@@ -89,49 +88,40 @@ def reverseTurnRight():
 	reverseLeft.value = 0.8
 	forwardRight.value = 0
 	reverseRight.value = 0.2
-
-commands = {
-    0 : forwardDrive(),
-    1 : reverseDrive(),
-    2 : spinLeft(),
-    3 : spinRight(),
-}
  
 def main():
+    allStop();
     while 1:
-        try:
-            line = getch()
-            if not line: break
+       # try:
+            line = getch.getch()
+            #if not line: break
             if line == 'w':
                 forwardDrive()
+		print('forward')
             if line == 's':
+		print('reverse')
                 reverseDrive()
             if line == 'a':
+		print('spinleft')
                 spinLeft()
             if line == 'd':
-                spinLeft()
+		print('spinRight')
+                spinRight()
             if line == 'q':
-                forwardLeft()
-            if line == 'e':
-                forwardRight()
-            if line == '1':
                 forwardTurnLeft()
-            if line == '3':
+            if line == 'e':
                 forwardTurnRight()
             if line == 'z':
-                reverseLeft()
-            if line == 'c':
-                reverseRight()
-            if line == 'v':
                 reverseTurnLeft()
-            if line == 'b':
+            if line == 'c':
                 reverseTurnRight()
-            else:
+            if line == 'p':
+		print('allstop')
                 allStop()
+	   # sleep(5)
 
-
-        except:
-            print('failed')
+       # except:
+            #print('failed')
 if __name__ == "__main__":
     """ This is executed when run from the command line """
     main()
