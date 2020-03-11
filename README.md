@@ -14,4 +14,7 @@ the test-scripts includes
 
   speechtest.py is the script that comes with speech_recognition, you can comment out the API you don't use in order to test your own.
 
+Project-Notes I took:
+https://docs.google.com/document/d/1gAC9D6439lH8Hcyk0u_7ycS_pRVnFGxAaalT6HRS22M/edit?usp=sharing
+
 have fun :)
