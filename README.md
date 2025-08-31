@@ -1,4 +1,4 @@
-# Shitty_Speech_Rover
+# Speech Driven Rover
 
 driver.py is the main script the runs the rover and depends on
 python3.5.3 and the following libs:
